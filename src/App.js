@@ -24,6 +24,14 @@ import { Component } from 'react';
 //   );
 // }
 
+
+
+// komponen - properties (props)
+function Ucapan(props) {
+  return <h2>Hallo {props.name}</h2>
+}
+
+
 class App extends Component {
   render() {
   return (
@@ -31,6 +39,9 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
+              <p>
+                <Ucapan name="Riki Widiantoro"/>
+              </p>
               {/* Edit <code>src/App.js</code> and save to reload. */}
               REACT JS
             </p>
