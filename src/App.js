@@ -27,8 +27,13 @@ import { Component } from 'react';
 
 
 // komponen - properties (props)
+
+function Umur(props) {
+  return <span>umurnya {props.age} tahun.</span>
+}
+
 function Ucapan(props) {
-  return <h2>Hallo {props.name}</h2>
+  return <h2>Hallo {props.name} - <Umur age={props.umur}/> </h2>
 }
 
 
@@ -40,7 +45,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <p>
               <p>
-                <Ucapan name="Riki Widiantoro"/>
+                <Ucapan name="Riki Widiantoro" umur="22"/>
               </p>
               {/* Edit <code>src/App.js</code> and save to reload. */}
               REACT JS
