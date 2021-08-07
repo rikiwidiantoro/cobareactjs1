@@ -26,15 +26,20 @@ import { Component } from 'react';
 
 
 
-// komponen - properties (props)
+// // komponen - properties (props)
 
-function Umur(props) {
-  return <span>umurnya {props.age} tahun.</span>
-}
+// function Umur(props) {
+//   return <span>umurnya {props.age} tahun.</span>
+// }
 
-function Ucapan(props) {
-  return <h2>Hallo {props.name} - <Umur age={props.umur}/> </h2>
-}
+// function Ucapan(props) {
+//   return <h2>Hallo {props.name} - <Umur age={props.umur}/> </h2>
+// }
+
+
+
+// 3 state di react js
+
 
 
 class App extends Component {
@@ -43,21 +48,6 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              <p>
-                <Ucapan name="Riki Widiantoro" umur="22"/>
-              </p>
-              {/* Edit <code>src/App.js</code> and save to reload. */}
-              REACT JS
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
           </header>
         </div>
       );
