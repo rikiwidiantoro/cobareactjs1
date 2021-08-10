@@ -88,11 +88,37 @@ function Clicker() {
   )
 }
 
+// bikin on off tombol
+class Toggle extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      toggleStatus : true
+    }
+    this.click = this.click.bind(this)
+  }
+
+  click() {
+    this.setState(state => ({
+      toggleStatus : !state.toggleStatus
+    }))
+  }
+
+  render() {
+    return (
+      <button onClick={this.click}>
+        {this.state.toggleStatus ? "ON" : "OFF"}
+      </button>
+    )
+  }
+}
+
 
 class App extends Component {
   render() {
   return (
         <div className="App">
+          <Toggle />
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             {/* <Timer start='0'/>
