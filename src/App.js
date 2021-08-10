@@ -73,7 +73,21 @@ import { Component } from 'react';
 // }
 
 
-// event handler react js
+
+
+// // event handler react js
+// menggunakan fuction component
+function Clicker() {
+  function handleClick(e) {
+    alert('berhasil diklik')
+    e.preventDefault();
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>klik disini bro!</a>
+  )
+}
+
 
 class App extends Component {
   render() {
@@ -84,6 +98,7 @@ class App extends Component {
             {/* <Timer start='0'/>
             <Timer start='5'/> */}
           </header>
+          <Clicker />
         </div>
       );
     }
