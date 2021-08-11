@@ -113,11 +113,15 @@ class Toggle extends Component {
   }
 }
 
-
+function Umur(props) {
+  return (
+    <span>dan umur saya {props.age} tahun.</span>
+  )
+}
 
 function Nama(props) {
-  return(
-    <p>Hallo, nama saya {props.nama}</p>
+  return (
+    <p>Hallo, nama saya {props.nama} <Umur age={props.umur} /></p>
   )
 }
 
@@ -129,7 +133,7 @@ class App extends Component {
           <Toggle />
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <Nama nama='Riki Widiantoro'/>
+            <Nama nama='Riki Widiantoro' umur='22'/>
             <Timer start='0'/>
             <Timer start='8'/>
           </header>
