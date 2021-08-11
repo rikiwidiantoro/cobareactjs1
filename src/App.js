@@ -121,6 +121,7 @@ class App extends Component {
           <Toggle />
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
+            <p>Riki Widiantoro</p>
             <Timer start='0'/>
             <Timer start='8'/>
           </header>
