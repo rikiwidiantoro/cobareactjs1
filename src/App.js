@@ -39,38 +39,38 @@ import { Component } from 'react';
 
 
 // // 3 state di react js
-// class Timer extends Component {
+class Timer extends Component {
 
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       time : props.start
-//     }
-//   }
+  constructor(props) {
+    super(props)
+    this.state = {
+      time : props.start
+    }
+  }
 
 
-//   // lifecycle
-//   componentDidMount() {
-//     this.addInterval = setInterval( () => this.increase(), 1000)
-//   }
+  // lifecycle
+  componentDidMount() {
+    this.addInterval = setInterval( () => this.increase(), 1000)
+  }
 
-//   componentWillUnmount() {
-//     clearInterval(this.addInterval)
-//   }
+  componentWillUnmount() {
+    clearInterval(this.addInterval)
+  }
 
-//   increase() {
-//     // update state time setiap detik
-//     this.setState( (state, props) => ({
-//       time : parseInt(state.time) + 1
-//     }))
-//   }
+  increase() {
+    // update state time setiap detik
+    this.setState( (state, props) => ({
+      time : parseInt(state.time) + 1
+    }))
+  }
 
-//   render() {
-//     return (
-//       <div> {this.state.time} Detik </div>
-//     )
-//   }
-// }
+  render() {
+    return (
+      <div> {this.state.time} Detik </div>
+    )
+  }
+}
 
 
 
@@ -121,8 +121,8 @@ class App extends Component {
           <Toggle />
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            {/* <Timer start='0'/>
-            <Timer start='5'/> */}
+            <Timer start='0'/>
+            <Timer start='8'/>
           </header>
           <Clicker />
         </div>
