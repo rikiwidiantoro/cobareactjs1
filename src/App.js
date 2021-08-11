@@ -114,6 +114,14 @@ class Toggle extends Component {
 }
 
 
+
+function Nama(props) {
+  return(
+    <p>Hallo, nama saya {props.nama}</p>
+  )
+}
+
+
 class App extends Component {
   render() {
   return (
@@ -121,7 +129,7 @@ class App extends Component {
           <Toggle />
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <p>Riki Widiantoro</p>
+            <Nama nama='Riki Widiantoro'/>
             <Timer start='0'/>
             <Timer start='8'/>
           </header>
