@@ -121,7 +121,7 @@ function Umur(props) {
 
 function Keterangan() {
   return (
-    <p>saya adalah seorang frontend developer</p>
+    <p>Saya adalah seorang frontend developer. Saya sedang belajar teknologi React Js</p>
   )
 }
 
@@ -140,6 +140,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <Nama nama='Riki Widiantoro' umur='22'/>
+            <Keterangan />
             <Timer start='0'/>
             <Timer start='8'/>
           </header>
