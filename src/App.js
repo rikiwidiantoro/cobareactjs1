@@ -119,6 +119,12 @@ function Umur(props) {
   )
 }
 
+function Keterangan() {
+  return (
+    <p>saya adalah seorang frontend developer</p>
+  )
+}
+
 function Nama(props) {
   return (
     <p>Hallo, nama saya {props.nama} <Umur age={props.umur} /></p>
