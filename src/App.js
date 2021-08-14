@@ -125,6 +125,12 @@ function Keterangan() {
   )
 }
 
+function Lengkap() {
+  return (
+    <p>lorem jnsoj f sdjvnjsvn djwoejnvwev jnsneiodsonvdsknvirw qoe efnjndsnvsnv jdcnjdvn skmef wokpekowefwrfkndfnjsd sjdnjrnrjngring jdnsjn kdjfj efjrgierniwor wkejfjwjkwrwpewpo skldvm.</p>
+  )
+}
+
 function Nama(props) {
   return (
     <p>Hallo, nama saya {props.nama} <Umur age={props.umur} /></p>
