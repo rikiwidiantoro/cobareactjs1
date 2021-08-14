@@ -147,6 +147,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <Nama nama='Riki Widiantoro' umur='22'/>
             <Keterangan />
+            <Lengkap /> <Keterangan />
             <Timer start='0'/>
             <Timer start='8'/>
           </header>
