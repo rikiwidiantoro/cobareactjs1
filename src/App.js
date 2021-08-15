@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import List from './List';
 
 // function App() {
 //   return (
@@ -145,7 +146,7 @@ class App extends Component {
     super(props)
     this.state = {
       todoItem: '', //ketikan user
-      item: [] //untuk menampung todoItem
+      items: [] //untuk menampung todoItem
     }
   }
 
@@ -153,11 +154,21 @@ class App extends Component {
   handleSubmit = (event) => {
     // mencegah sifat aslinya reload
     event.preventDefault()
-    console.log('terpanggil')
+    this.setState({
+      // penulisan dengan javascript biasa
+      // items: this.state.items.concat([this.state.todoItem])
+
+      // penulisan dengan es6 menggunakan spread object/operator
+      items: [...this.state.items, this.state.todoItem],
+      todoItem: '' 
+    })
   }
 
-  handleChange = () => {
-    
+  handleChange = (event) => {
+    // mengubah state
+    this.setState({
+      todoItem: event.target.value //mengganti todoItem dengan inputan user
+    })
   }
 
 
@@ -184,6 +195,7 @@ class App extends Component {
             <input value={this.state.todoItem} onChange={this.handleChange} />
             <button>Tambah</button>
           </form>
+          <List items={this.state.items}/>
         </div>
       );
     }
