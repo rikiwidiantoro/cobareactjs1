@@ -144,7 +144,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      todoItem: '' //ketikan user
+      todoItem: '', //ketikan user
+      item: [] //untuk menampung todoItem
     }
   }
 
@@ -152,6 +153,11 @@ class App extends Component {
   handleSubmit = (event) => {
     // mencegah sifat aslinya reload
     event.preventDefault()
+    console.log('terpanggil')
+  }
+
+  handleChange = () => {
+    
   }
 
 
@@ -175,7 +181,7 @@ class App extends Component {
         // todo list
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input></input>
+            <input value={this.state.todoItem} onChange={this.handleChange} />
             <button>Tambah</button>
           </form>
         </div>
