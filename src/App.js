@@ -39,119 +39,145 @@ import { Component } from 'react';
 
 
 // // 3 state di react js
-class Timer extends Component {
+// class Timer extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      time : props.start
-    }
-  }
-
-
-  // lifecycle
-  componentDidMount() {
-    this.addInterval = setInterval( () => this.increase(), 1000)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.addInterval)
-  }
-
-  increase() {
-    // update state time setiap detik
-    this.setState( (state, props) => ({
-      time : parseInt(state.time) + 1
-    }))
-  }
-
-  render() {
-    return (
-      <div> {this.state.time} Detik </div>
-    )
-  }
-}
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       time : props.start
+//     }
+//   }
 
 
+//   // lifecycle
+//   componentDidMount() {
+//     this.addInterval = setInterval( () => this.increase(), 1000)
+//   }
+
+//   componentWillUnmount() {
+//     clearInterval(this.addInterval)
+//   }
+
+//   increase() {
+//     // update state time setiap detik
+//     this.setState( (state, props) => ({
+//       time : parseInt(state.time) + 1
+//     }))
+//   }
+
+//   render() {
+//     return (
+//       <div> {this.state.time} Detik </div>
+//     )
+//   }
+// }
 
 
-// // event handler react js
-// menggunakan fuction component
-function Clicker() {
-  function handleClick(e) {
-    alert('berhasil diklik')
-    e.preventDefault();
-  }
 
-  return (
-    <a href="#" onClick={handleClick}>klik disini bro!</a>
-  )
-}
 
-// bikin on off tombol
-class Toggle extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      toggleStatus : true
-    }
-    this.click = this.click.bind(this)
-  }
+// // // event handler react js
+// // menggunakan fuction component
+// function Clicker() {
+//   function handleClick(e) {
+//     alert('berhasil diklik')
+//     e.preventDefault();
+//   }
 
-  click() {
-    this.setState(state => ({
-      toggleStatus : !state.toggleStatus
-    }))
-  }
+//   return (
+//     <a href="#" onClick={handleClick}>klik disini bro!</a>
+//   )
+// }
 
-  render() {
-    return (
-      <button onClick={this.click}>
-        {this.state.toggleStatus ? "ON" : "OFF"}
-      </button>
-    )
-  }
-}
+// // bikin on off tombol
+// class Toggle extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       toggleStatus : true
+//     }
+//     this.click = this.click.bind(this)
+//   }
 
-function Umur(props) {
-  return (
-    <span>dan umur saya {props.age} tahun.</span>
-  )
-}
+//   click() {
+//     this.setState(state => ({
+//       toggleStatus : !state.toggleStatus
+//     }))
+//   }
 
-function Keterangan() {
-  return (
-    <p>Saya adalah seorang frontend developer. Saya sedang belajar teknologi React Js</p>
-  )
-}
+//   render() {
+//     return (
+//       <button onClick={this.click}>
+//         {this.state.toggleStatus ? "ON" : "OFF"}
+//       </button>
+//     )
+//   }
+// }
 
-function Lengkap() {
-  return (
-    <p>lorem jnsoj f sdjvnjsvn djwoejnvwev jnsneiodsonvdsknvirw qoe efnjndsnvsnv jdcnjdvn skmef wokpekowefwrfkndfnjsd sjdnjrnrjngring jdnsjn kdjfj efjrgierniwor wkejfjwjkwrwpewpo skldvm.</p>
-  )
-}
+// function Umur(props) {
+//   return (
+//     <span>dan umur saya {props.age} tahun.</span>
+//   )
+// }
 
-function Nama(props) {
-  return (
-    <p>Hallo, nama saya {props.nama} <Umur age={props.umur} /></p>
-  )
-}
+// function Keterangan() {
+//   return (
+//     <p>Saya adalah seorang frontend developer. Saya sedang belajar teknologi React Js</p>
+//   )
+// }
+
+// function Lengkap() {
+//   return (
+//     <p>lorem jnsoj f sdjvnjsvn djwoejnvwev jnsneiodsonvdsknvirw qoe efnjndsnvsnv jdcnjdvn skmef wokpekowefwrfkndfnjsd sjdnjrnrjngring jdnsjn kdjfj efjrgierniwor wkejfjwjkwrwpewpo skldvm.</p>
+//   )
+// }
+
+// function Nama(props) {
+//   return (
+//     <p>Hallo, nama saya {props.nama} <Umur age={props.umur} /></p>
+//   )
+// }
 
 
 class App extends Component {
+
+  // constructor
+  constructor(props) {
+    super(props)
+    this.state = {
+      todoItem: '' //ketikan user
+    }
+  }
+
+  // event
+  handleSubmit = (event) => {
+    // mencegah sifat aslinya reload
+    event.preventDefault()
+  }
+
+
   render() {
   return (
-        <div className="App">
-          <Toggle />
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <Nama nama='Riki Widiantoro' umur='22'/>
-            <Keterangan />
-            <Lengkap /> <Keterangan />
-            <Timer start='0'/>
-            <Timer start='8'/>
-          </header>
-          <Clicker />
+        // <div className="App">
+        //   <Toggle />
+        //   <header className="App-header">
+        //     <img src={logo} className="App-logo" alt="logo" />
+        //     <Nama nama='Riki Widiantoro' umur='22'/>
+        //     <Keterangan />
+        //     <Lengkap /> <Keterangan />
+        //     <Timer start='0'/>
+        //     <Timer start='8'/>
+        //   </header>
+        //   <Clicker />
+        // </div>
+
+
+
+        // todo list
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <input></input>
+            <button>Tambah</button>
+          </form>
         </div>
       );
     }
