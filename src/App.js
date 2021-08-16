@@ -203,10 +203,31 @@ import { Component } from 'react';
 
 class App extends Component {
 
+  // API
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      items : []
+    }
+  }
+
+  // lifecycle di react
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response => response.json())
+      .then(data => this.setState({ items: data }))
+  }
+
   render() {
+
+    const { items } = this.state
+
   return (
         <div>
-          <p>Riki Widiantoro</p>
+          <ul>
+            {items.map((item, index) => <li key={index}> {item.name} </li> )}
+          </ul>
         </div>
       );
     }
