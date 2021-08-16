@@ -205,7 +205,9 @@ class App extends Component {
 
   render() {
   return (
-        <div></div>
+        <div>
+          <p>Riki Widiantoro</p>
+        </div>
       );
     }
 }
