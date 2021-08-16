@@ -208,7 +208,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      items : []
+      items : [],
+      isLoading: true
     }
   }
 
@@ -216,12 +217,16 @@ class App extends Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
-      .then(data => this.setState({ items: data }))
+      .then(data => this.setState({ items: data, isLoading: false }))
   }
 
   render() {
 
-    const { items } = this.state
+    const { items, isLoading } = this.state
+
+    if( isLoading ) {
+      return <p>Loading........</p>
+    }
 
   return (
         <div>
