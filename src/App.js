@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import List from './List';
+// import List from './List';
 
 // function App() {
 //   return (
@@ -139,64 +139,73 @@ import List from './List';
 // }
 
 
+// class App extends Component {
+
+//   // constructor
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       todoItem: '', //ketikan user
+//       items: [] //untuk menampung todoItem
+//     }
+//   }
+
+//   // event
+//   handleSubmit = (event) => {
+//     // mencegah sifat aslinya reload
+//     event.preventDefault()
+//     this.setState({
+//       // penulisan dengan javascript biasa
+//       // items: this.state.items.concat([this.state.todoItem])
+
+//       // penulisan dengan es6 menggunakan spread object/operator
+//       items: [...this.state.items, this.state.todoItem],
+//       todoItem: '' 
+//     })
+//   }
+
+//   handleChange = (event) => {
+//     // mengubah state
+//     this.setState({
+//       todoItem: event.target.value //mengganti todoItem dengan inputan user
+//     })
+//   }
+
+
+//   render() {
+//   return (
+//         // <div className="App">
+//         //   <Toggle />
+//         //   <header className="App-header">
+//         //     <img src={logo} className="App-logo" alt="logo" />
+//         //     <Nama nama='Riki Widiantoro' umur='22'/>
+//         //     <Keterangan />
+//         //     <Lengkap /> <Keterangan />
+//         //     <Timer start='0'/>
+//         //     <Timer start='8'/>
+//         //   </header>
+//         //   <Clicker />
+//         // </div>
+
+
+
+//         // todo list
+//         <div>
+//           <form onSubmit={this.handleSubmit}>
+//             <input value={this.state.todoItem} onChange={this.handleChange} />
+//             <button>Tambah</button>
+//           </form>
+//           <List items={this.state.items}/>
+//         </div>
+//       );
+//     }
+// }
+
 class App extends Component {
-
-  // constructor
-  constructor(props) {
-    super(props)
-    this.state = {
-      todoItem: '', //ketikan user
-      items: [] //untuk menampung todoItem
-    }
-  }
-
-  // event
-  handleSubmit = (event) => {
-    // mencegah sifat aslinya reload
-    event.preventDefault()
-    this.setState({
-      // penulisan dengan javascript biasa
-      // items: this.state.items.concat([this.state.todoItem])
-
-      // penulisan dengan es6 menggunakan spread object/operator
-      items: [...this.state.items, this.state.todoItem],
-      todoItem: '' 
-    })
-  }
-
-  handleChange = (event) => {
-    // mengubah state
-    this.setState({
-      todoItem: event.target.value //mengganti todoItem dengan inputan user
-    })
-  }
-
 
   render() {
   return (
-        // <div className="App">
-        //   <Toggle />
-        //   <header className="App-header">
-        //     <img src={logo} className="App-logo" alt="logo" />
-        //     <Nama nama='Riki Widiantoro' umur='22'/>
-        //     <Keterangan />
-        //     <Lengkap /> <Keterangan />
-        //     <Timer start='0'/>
-        //     <Timer start='8'/>
-        //   </header>
-        //   <Clicker />
-        // </div>
-
-
-
-        // todo list
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <input value={this.state.todoItem} onChange={this.handleChange} />
-            <button>Tambah</button>
-          </form>
-          <List items={this.state.items}/>
-        </div>
+        <div></div>
       );
     }
 }
