@@ -236,7 +236,13 @@ class App extends Component {
 
           <ul>
             {items.map( (item) => 
-              <li>Nama : {item.name}, <p>Email : {item.email}</p> </li>
+              <li>
+                <div>
+                  <p>Nama : {item.name}</p> 
+                  <p>Email : {item.email}</p> 
+                  <p>Kota : {item.address.city}</p>
+                </div>
+              </li>
             )}
           </ul>
         </div>
