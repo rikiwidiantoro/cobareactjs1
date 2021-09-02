@@ -234,7 +234,11 @@ class App extends Component {
             {items.map((item, index) => <li key={index}> {item.name} </li>)}
           </ul> */}
 
-          
+          <ul>
+            {items.map( (item) => 
+              <li>Nama : {item.name}, <p>Email : {item.email}</p> </li>
+            )}
+          </ul>
         </div>
       );
     }
