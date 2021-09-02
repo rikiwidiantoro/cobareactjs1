@@ -230,9 +230,11 @@ class App extends Component {
 
   return (
         <div>
-          <ul>
-            {items.map((item, index) => <li key={index}> {item.name} </li> )}
-          </ul>
+          {/* <ul>
+            {items.map((item, index) => <li key={index}> {item.name} </li>)}
+          </ul> */}
+
+          
         </div>
       );
     }
