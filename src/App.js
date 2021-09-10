@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import Judul from './Judul'
 // import List from './List';
 
 // function App() {
@@ -230,6 +231,7 @@ class App extends Component {
 
   return (
         <div>
+          <Judul />
           {/* <ul>
             {items.map((item, index) => <li key={index}> {item.name} </li>)}
           </ul> */}
