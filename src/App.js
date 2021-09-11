@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import Judul from './Judul'
+import Judul from './komponen/Judul'
 // import List from './List';
 
 // function App() {
