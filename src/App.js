@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import Judul from './komponen/Judul'
+import Judul from './komponen/Judul';
+import Footer from './komponen/Footer';
 // import List from './List';
 
 // function App() {
@@ -247,6 +248,7 @@ class App extends Component {
               </li>
             )}
           </ul>
+          <Footer />
         </div>
       );
     }
