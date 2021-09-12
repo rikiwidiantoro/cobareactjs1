@@ -241,7 +241,7 @@ class App extends Component {
             {items.map( (item) => 
               <li>
                 <div>
-                  <p>Nama : {item.name}</p> 
+                  <p>Nama : <span className="nama">{item.name}</span></p> 
                   <p>Email : {item.email}</p> 
                   <p>Kota : {item.address.city}</p>
                 </div>
