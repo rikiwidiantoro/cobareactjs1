@@ -1,5 +1,11 @@
+* {
+    font-family: sans-serif;
+}
+
 .div-footer {
     background-color: rgb(75, 71, 71);
+    padding: 3px;
+    text-align: center;
 }
 .p-footer {
     color: honeydew;
