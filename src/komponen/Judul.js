@@ -3,8 +3,8 @@ import { Component } from "react/cjs/react.production.min";
 class Judul extends Component {
     render() {
         return (
-            <div>
-                <h1>List menggunakan API</h1>
+            <div className="div-footer">
+                <h2 className="p-footer">List menggunakan API</h2>
             </div>
         )
     }
